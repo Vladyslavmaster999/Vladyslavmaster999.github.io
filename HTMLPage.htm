@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab6</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            line-height: 1.7;
+            color: #333;
+            transition: background-color 0.3s ease;
+        }
+
+        header {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: 1px;
+            font-weight: 300;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem;
+            transition: max-width 0.3s ease;
+        }
+
+        section {
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #dddd2d;
+            font-weight: 500;
+        }
+
+        .intro p {
+            font-size: 1.25rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #666;
+        }
+
+        .map-container, .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+            .map-container iframe, .video-container iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border: none;
+                border-radius: 8px;
+            }
+
+        .audio {
+            text-align: center;
+        }
+
+        .sub {
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .music {
+            width: 100%;
+            max-width: 400px;
+            margin-top: 1rem;
+        }
+
+        footer {
+            background-color: red;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            position: relative;
+            width: 100%;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+        }
+
+        /* Subscribe button styles */
+        .subscribe-button {
+            display: inline-block;
+            padding: 10px 20px; /* Adjust padding */
+            font-size: 16px;
+            color: white;
+            background-color: #FF0000; /* Red color */
+            border: none;
+            border-radius: 5px; /* Slightly rounded corners */
+            text-decoration: none;
+            font-weight: bold; /* Make text bold */
+            text-align: center; /* Center the text */
+            transition: background-color 0.3s ease; /* Smooth transition */
+        }
+
+            .subscribe-button:hover {
+                background-color: #CC0000; /* Darker shade on hover */
+            }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Лабораторна робота 6</h1>
+    </header>
+
+    <main>
+
+        <section class="about">
+            <h2>Києво-Печерська лавра</h2>
+            <p>Свята Успенська Києво-Печерська Лавра є першим і найдавнішим монастирем на території сучасної України. Тільки три монастирські обителі мають в Україні в даний час статус лаври і освячені на честь Успіння Пресвятої Богородиці — Києво-Печерська, Почаївська і Святогірська. Це свідчить про особливе шанування Пресвятої Богородиці нашим православним народом, а також зв’язок монашества на Русі і древньої обителі Успіння Богоматері на Горі Афон.</p>
+        </section>
+
+        <section class="locations">
+            <h2>Наша локація</h2>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12784.857468747503!2d30.538981523090144!3d50.45076222372839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cfa04a0c8e5b%3A0x3b40a2bcbca08807!2z0JLQvtGA0L7Rh9C90LDRjyDQpdCw0YPQvdGW0L_RgNC-0LzQsNC90YHQutC40Lkg0YbQtdC90YLRgNC-0LLRgdGM0LrQvtCz0L4!5e0!3m2!1sru!2sua!4v1696845141191!5m2!1sru!2sua"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </section>
+
+        <section class="directions">
+            <h2>Маршрути</h2>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d74579.50618495782!2d30.402613640771108!3d50.430896140239405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d50.445433699999995!2d30.441967199999997!4m5!1s0x40d4cfa04a0c8e5b%3A0x3b40a2bcbca08807!2z0JrQuNC10LLQvi3Qn9C10YfQtdGA0YHQutCw0Y8g0LvQsNCy0YDQsCwg0LLRg9C70LjRhtGPINCb0LDQstGA0YHRjNC60LAsIDE1LCDQmtC40ZfQsiwgMDEwMTU!3m2!1d50.4346375!2d30.5572558!5e0!3m2!1sru!2sua!4v1728480769165!5m2!1sru!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+
+        <section class="street-view">
+            <h2>Подорож по Києво-Печерській лаврі</h2>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!4v1728481809035!6m8!1m7!1s1tF-Ul8RWpLd9M4BdHtSmw!2m2!1d50.43475376496249!2d30.55718693163217!3f98.72483595035683!4f-3.0369552859264265!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+
+        <section class="video">
+            <h2>Відео</h2>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/zww5Bhl_W08?si=ycJPrQ0_18MBXr34" width="560" height="315" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section class="music">
+            <h2>Музика</h2>
+            <p class="sub">Також дану музику можна скачати!</p>
+            <audio class="music" controls>
+                <source src="audio/autumn-sadness-246599.mp3" type="audio/mpeg">
+                Your browser does not support the audio tag.
+            </audio>
+
+        </section>
+
+        <section class="subscribe">
+            <h2>Підписатися на наш канал</h2>
+            <a href="https://www.youtube.com/@travelight?sub_confirmation=1" target="_blank" class="subscribe-button">Subscribe Now</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>Вихристюк Владислав</p>
+    </footer>
+</body>
+</html>
