@@ -1,200 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab6</title>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Сонячна система</title>
+ <link rel="stylesheet" href="style.css">
 
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+ <!-- jQuery -->
+ <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
-        body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            line-height: 1.7;
-            color: #333;
-            transition: background-color 0.3s ease;
-        }
-
-        header {
-            background-color: black;
-            color: white;
-            text-align: center;
-            padding: 2rem 1rem;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 0.5rem;
-            letter-spacing: 1px;
-            font-weight: 300;
-        }
-
-        header p {
-            font-size: 1.2rem;
-            opacity: 0.8;
-        }
-
-        main {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 2rem;
-            transition: max-width 0.3s ease;
-        }
-
-        section {
-            margin-bottom: 3rem;
-        }
-
-        h2 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            color: #dddd2d;
-            font-weight: 500;
-        }
-
-        .intro p {
-            font-size: 1.25rem;
-            text-align: center;
-            margin-bottom: 2rem;
-            color: #666;
-        }
-
-        .map-container, .video-container {
-            position: relative;
-            width: 100%;
-            padding-bottom: 56.25%; /* 16:9 aspect ratio */
-            height: 0;
-            overflow: hidden;
-            margin-bottom: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        }
-
-            .map-container iframe, .video-container iframe {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                border: none;
-                border-radius: 8px;
-            }
-
-        .audio {
-            text-align: center;
-        }
-
-        .sub {
-            margin-bottom: 1rem;
-            font-size: 1rem;
-            color: #555;
-        }
-
-        .music {
-            width: 100%;
-            max-width: 400px;
-            margin-top: 1rem;
-        }
-
-        footer {
-            background-color: red;
-            color: white;
-            text-align: center;
-            padding: 1rem 0;
-            position: relative;
-            width: 100%;
-            font-size: 0.9rem;
-            letter-spacing: 0.5px;
-        }
-
-        /* Subscribe button styles */
-        .subscribe-button {
-            display: inline-block;
-            padding: 10px 20px; /* Adjust padding */
-            font-size: 16px;
-            color: white;
-            background-color: #FF0000; /* Red color */
-            border: none;
-            border-radius: 5px; /* Slightly rounded corners */
-            text-decoration: none;
-            font-weight: bold; /* Make text bold */
-            text-align: center; /* Center the text */
-            transition: background-color 0.3s ease; /* Smooth transition */
-        }
-
-            .subscribe-button:hover {
-                background-color: #CC0000; /* Darker shade on hover */
-            }
-    </style>
+ <!-- Owl Carousel CSS -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+ <!-- jQuery UI for Accordion and Datepicker -->
+ <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+ <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+ <!-- Owl Carousel JS -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+ <script>
+ $(document).ready(function(){
+ // Initialize Owl Carousel
+ $('.owl-carousel').owlCarousel({
+ loop: true, // Loop the carousel
+ margin: 10, // Margin between items
+ nav: true, // Show next/prev buttons
+ responsive: {
+ 0: {
+ items: 1
+ },
+ 600: {
+ items: 3
+ },
+ 1000: {
+ items: 5
+ }
+ }
+ });
+ // Initialize Accordion
+ $("#accordion").accordion();
+ // Initialize Datepicker
+ $("#datepicker").datepicker();
+ $("input[type='button']").click(function(event){
+ alert("Вітаю, ви підключені!");
+ });
+ });
+ </script>
+ <style>
+ .accordion-section {
+ margin-top: 20px;
+ }
+ .owl-carousel img {
+ width: 100%;
+ height: auto;
+ }
+ </style>
 </head>
 <body>
-    <header>
-        <h1>Лабораторна робота 6</h1>
-    </header>
+ <div class="container">
+ <h1>На цьому сайті я використав jQuery, Owl Carousel, Accordion, та Datepicker!</h1>
 
-    <main>
+<!-- Carousel container -->
+ <div class="owl-carousel">
+ <div><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fnssdc.gsfc.nasa.gov%2Fplanetary
+%2Fimage
+%2Fsun.jpg&f=1&nofb=1&ipt=5a0738b0738e89466a0ffea4e61fcbe43840951bc16e2572c82c82e4058f403c&ipo=images
+" alt="Image 0"></div>
+ <div><img
+src="https://www.popsci.com/wp-content/uploads/2019/01/07/RZODSOHKA6O4VMNPPUW7GUTUBE.jpg?
+w=2048&h=2048" alt="Image 1"></div>
+ <div><img
+src="https://www.popsci.com/wp-content/uploads/2019/01/07/LP5TMWXTF6VV6VQ6YDQGZ3YLQQ.jpg" alt="Image
+2"></div>
+ <div><img
+src="https://www.popsci.com/wp-content/uploads/2019/01/07/57LV7D7YHYJ2BDWMUKBC3J5WG4.jpg" alt="Image
+3"></div>
+ <div><img
+src="https://www.popsci.com/wp-content/uploads/2019/01/07/XYNJU7VV7ISTJ4HJLUR5ERUZOE.jpg" alt="Image
+4"></div>
+ <div><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.zmescience.com%2Fwpcontent%2Fuploads%2F2019%2F08%2Fstsci-h-p1936a-m1999x2000.png&f=1&nofb=1&ipt=f991d0102bcd4ddf06de119481c3e0890ab50f971e6053f0bda120e1350e9dff&ipo=ima
+ges" alt="Image 5"></div>
+ <div><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fspace-facts.com%2Fwp-content
+%2Fuploads
+%2Fsaturn.png&f=1&nofb=1&ipt=6c6a4a174b6324dd9a22109d54e653afd24435c2d551c5b6a47a671e3ccba709&ipo=im
+ages" alt="Image 6"></div>
+ <div><img
+src="https://www.popsci.com/wp-content/uploads/2019/01/07/2JK6SFTHA6WHV56FGHXNWWNDSE.jpg" alt="Image
+7"></div>
+ <div><img src="https://www.popsci.com/wp-content/uploads/2019/01/07/3BR7HFELGONI3J4CB4USPR5GWI.jpg"
+alt="Image 8"></div>
+<div><img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fblogs.nasa.gov%2Fpluto
+%2Fwp-content%2Fuploads%2Fsites%2F253%2F2015%2F10%2Fplutoheart.png&f=1&nofb=1&ipt=9fdc7dda8a643c797710400abdddcc901466fd602d244d98ec47647570cfc3f2&ipo=images"
+alt="Image 9"></div>
+ </div> <!-- Accordion Section -->
+ <div class="accordion-section">
+ <h2>Що вони з себе представляють</h2>
+ <div id="accordion">
+ <h3>Сонце</h3>
+ <div>
+ <p>Зірка, навколо якої обертаються всі планети Сонячної системи. Це величезна куля гарячого
+плазмового газу, що забезпечує енергією Землю та всі інші планети.</p>
+ </div>
+ <h3>Меркурій</h3>
+ <div>
+ <p>Найменша і найближча до Сонця планета. Має скелясту поверхню і майже не має атмосфери, через
+що температура на ній сильно змінюється між днем і ніччю.</p>
+ </div>
+ <h3>Венера</h3>
+ <div>
+ <p>Схожа за розміром до Землі, але має густу атмосферу з вуглекислого газу, що створює сильний
+парниковий ефект, роблячи її найгарячішою планетою.</p>
+ </div>
+ <h3>Земля</h3>
+ <div>
+ <p>Єдина планета, відома науці, де існує життя. Має водну поверхню та атмосферу, що складається з
+азоту, кисню та інших газів, що підтримують живі організми.</p>
+ </div>
+<h3>Марс</h3>
+ <div>
+ <p>Відома як "Червона планета" через оксид заліза на поверхні. Можливо, у минулому мала воду в рідкому
+стані, і зараз досліджується як потенційна планета для майбутньої колонізації.</p>
+ </div>
+ <h3>Юпітер</h3>
+ <div>
+ <p>Найбільша планета Сонячної системи, газовий гігант із великою кількістю супутників та знаменитою
+Великою Червоною Плямою — гігантським штормом, що триває століттями.</p>
+ </div>
+ <h3>Сатурн</h3>
+ <div>
+ <p>Відомий своїми вражаючими кільцями, що складаються з льоду та пилу. Це ще один газовий гігант із
+численними супутниками.</p>
+ </div>
+ <h3>Уран</h3>
+ <div>
+ <p>Газовий гігант із блакитним кольором через метан в атмосфері. Ось обертання Урана сильно нахилений,
+через що він фактично "лежить на боці".</p>
+ </div>
+ <h3>Нептун</h3>
+ <div>
+ <p>Остання офіційна планета Сонячної системи, газовий гігант із надзвичайно сильними вітрами. Його синій
+колір теж обумовлений метаном в атмосфері.</p>
+ </div>
+ <h3>Плутон</h3>
+ <div>
+ <p>Колишня дев'ята планета, нині класифікується як карликова планета. Має крижану поверхню і дуже
+ексцентричну орбіту.</p>
+ </div>
+ </div>
+ </div>
+ <!-- Datepicker Section -->
+ <div>
+ <h2>Коли в останній раз ви бачили НЛО?</h2>
+ <input type="text" id="datepicker">
+ </div>
 
-        <section class="about">
-            <h2>Києво-Печерська лавра</h2>
-            <p>Свята Успенська Києво-Печерська Лавра є першим і найдавнішим монастирем на території сучасної України. Тільки три монастирські обителі мають в Україні в даний час статус лаври і освячені на честь Успіння Пресвятої Богородиці — Києво-Печерська, Почаївська і Святогірська. Це свідчить про особливе шанування Пресвятої Богородиці нашим православним народом, а також зв’язок монашества на Русі і древньої обителі Успіння Богоматері на Горі Афон.</p>
-        </section>
-
-        <section class="locations">
-            <h2>Наша локація</h2>
-            <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12784.857468747503!2d30.538981523090144!3d50.45076222372839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cfa04a0c8e5b%3A0x3b40a2bcbca08807!2z0JLQvtGA0L7Rh9C90LDRjyDQpdCw0YPQvdGW0L_RgNC-0LzQsNC90YHQutC40Lkg0YbQtdC90YLRgNC-0LLRgdGM0LrQvtCz0L4!5e0!3m2!1sru!2sua!4v1696845141191!5m2!1sru!2sua"
-                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-            </div>
-        </section>
-
-        <section class="directions">
-            <h2>Маршрути</h2>
-            <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d74579.50618495782!2d30.402613640771108!3d50.430896140239405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d50.445433699999995!2d30.441967199999997!4m5!1s0x40d4cfa04a0c8e5b%3A0x3b40a2bcbca08807!2z0JrQuNC10LLQvi3Qn9C10YfQtdGA0YHQutCw0Y8g0LvQsNCy0YDQsCwg0LLRg9C70LjRhtGPINCb0LDQstGA0YHRjNC60LAsIDE1LCDQmtC40ZfQsiwgMDEwMTU!3m2!1d50.4346375!2d30.5572558!5e0!3m2!1sru!2sua!4v1728480769165!5m2!1sru!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </section>
-
-        <section class="street-view">
-            <h2>Подорож по Києво-Печерській лаврі</h2>
-            <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!4v1728481809035!6m8!1m7!1s1tF-Ul8RWpLd9M4BdHtSmw!2m2!1d50.43475376496249!2d30.55718693163217!3f98.72483595035683!4f-3.0369552859264265!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </section>
-
-        <section class="video">
-            <h2>Відео</h2>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/zww5Bhl_W08?si=ycJPrQ0_18MBXr34" width="560" height="315" allowfullscreen></iframe>
-            </div>
-        </section>
-
-        <section class="music">
-            <h2>Музика</h2>
-            <p class="sub">Також дану музику можна скачати!</p>
-            <audio class="music" controls>
-                <source src="audio/autumn-sadness-246599.mp3" type="audio/mpeg">
-                Your browser does not support the audio tag.
-            </audio>
-
-        </section>
-
-        <section class="subscribe">
-            <h2>Підписатися на наш канал</h2>
-            <a href="https://www.youtube.com/@travelight?sub_confirmation=1" target="_blank" class="subscribe-button">Subscribe Now</a>
-        </section>
-    </main>
-
-    <footer>
-        <p>Вихристюк Владислав</p>
-    </footer>
+ <input type="button" value="Ловити зв'язок з космосом">
+ </div>
 </body>
 </html>
