@@ -108,15 +108,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
- }
+  height: 300px; /* Висота контейнера */
+}
 
- .owl-carousel .owl-item img {
-  width: 100%; /* Ширина зображення відповідає ширині контейнера */
-  height: 300px; /* Встановлюємо однакову висоту для всіх зображень */
-  object-fit: contain; /* Зображення зберігають пропорції і заповнюють контейнер */
+.owl-carousel img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
   border-radius: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
- }
+}
 
  .owl-carousel img:hover {
   transform: scale(1.05);
