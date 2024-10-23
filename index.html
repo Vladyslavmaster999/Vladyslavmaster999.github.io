@@ -108,12 +108,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 300px; /* Висота контейнера */
+  overflow: hidden;/* Висота контейнера */
+  display: flex;
+
 }
 
 .owl-carousel img {
   max-width: 100%;
-  max-height: 300px;
+  max-height: 100%;
   object-fit: cover;
   border-radius: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
